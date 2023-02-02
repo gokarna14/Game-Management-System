@@ -18645,6 +18645,11 @@
   "RootNamespace": "GameManagementSystem",
   "Documents": [
     {
+      "FilePath": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/Views/Admin/Index.cshtml",
+      "TargetPath": "Views\\Admin\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

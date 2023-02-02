@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h8vU9J3rnGS4beNO6BHDyS1g/CQoQNrhv/hiPw1p3L8=",
+  "Hash": "ESbLSHtZvFi/0Shk5TS14NVcQo4YCVirSQMIknAYllY=",
   "Source": "GameManagementSystem",
   "BasePath": "_content/GameManagementSystem",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/obj/Debug/net7.0/scopedcss/projectbundle/GameManagementSystem.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/bootstrap.css",
+      "SourceId": "GameManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/",
+      "BasePath": "_content/GameManagementSystem",
+      "RelativePath": "css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/bootstrap.css"
+    },
+    {
+      "Identity": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/bootswatchTheme.css",
+      "SourceId": "GameManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/",
+      "BasePath": "_content/GameManagementSystem",
+      "RelativePath": "css/bootswatchTheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/bootswatchTheme.css"
     },
     {
       "Identity": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/site.css",

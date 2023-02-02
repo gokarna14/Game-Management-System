@@ -1,0 +1,69 @@
+@model IEnumerable<Admin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Admin List</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+                <th>
+                    Admin Id
+                </th> 
+                <th>
+                    First Name
+                </th> 
+                <th>
+                    Middle Name
+                </th> 
+                <th>
+                    Last Name
+                </th> 
+                <th>
+                    User Name
+                </th>
+                <th>
+                    Password
+                </th>
+                <th>
+                    Created
+                </th>
+                <th>
+                    Updated
+                </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model)
+        {
+            <tr>
+                <td>
+                    @row.AdminId
+                </td>
+                <td>
+                    @row.FirstName
+                </td>
+                <td>
+                    @row.MiddleName
+                </td>
+                <td>
+                    @row.LastName
+                </td>
+                <td>
+                    @row.Username
+                </td>
+                <td>
+                    @row.Password
+                </td>
+                <td>
+                    @row.Created
+                </td>
+                <td>
+                    @row.Updated
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

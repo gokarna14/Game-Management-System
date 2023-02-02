@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets/GameManagementSystem.bundle.scp.css"
     },
     {
+      "Id": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/bootstrap.css",
+      "PackagePath": "staticwebassets/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/bootswatchTheme.css",
+      "PackagePath": "staticwebassets/css/bootswatchTheme.css"
+    },
+    {
       "Id": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
