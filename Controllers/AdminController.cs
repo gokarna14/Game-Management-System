@@ -23,5 +23,22 @@ namespace GameManagementSystem.Controllers
 
             return View(objAdminList);
         }
+
+        // GET
+        public IActionResult Create()
+        {
+            return View();
+        }
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Admin obj)
+        {
+            _db.Admin.Add(obj);
+
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

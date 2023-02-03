@@ -1,0 +1,35 @@
+@model Admin
+
+<form method="post">
+    <div class="border p-5 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">
+                Create Admin
+            </h2>
+            <hr>
+        </div>
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="MiddleName"></label>
+            <input asp-for="MiddleName" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Username"></label>
+            <input asp-for="Username" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control">
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-asp-controller="Admin" asp-action="Index" class="btn btn-danger">Back To List</a>
+    </div>
+</form> 

@@ -4,66 +4,78 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Admin List</h1>
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Admin List</h2>
+        </div>
+        <div class="col-6">
+            <a asp-controller="Admin" asp-action="Create" class="btn btn-primary">
+               <i class="bi bi-plus-circle-fill"></i> &nbsp; Create New Admin Account
+            </a>
+        </div>
+    </div>
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-                <th>
-                    Admin Id
-                </th> 
-                <th>
-                    First Name
-                </th> 
-                <th>
-                    Middle Name
-                </th> 
-                <th>
-                    Last Name
-                </th> 
-                <th>
-                    User Name
-                </th>
-                <th>
-                    Password
-                </th>
-                <th>
-                    Created
-                </th>
-                <th>
-                    Updated
-                </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var row in Model)
-        {
+
+    <table class="table table-bordered">
+        <thead>
             <tr>
-                <td>
-                    @row.AdminId
-                </td>
-                <td>
-                    @row.FirstName
-                </td>
-                <td>
-                    @row.MiddleName
-                </td>
-                <td>
-                    @row.LastName
-                </td>
-                <td>
-                    @row.Username
-                </td>
-                <td>
-                    @row.Password
-                </td>
-                <td>
-                    @row.Created
-                </td>
-                <td>
-                    @row.Updated
-                </td>
+                    <th>
+                        Admin Id
+                    </th> 
+                    <th>
+                        First Name
+                    </th> 
+                    <th>
+                        Middle Name
+                    </th> 
+                    <th>
+                        Last Name
+                    </th> 
+                    <th>
+                        User Name
+                    </th>
+                    <th>
+                        Password
+                    </th>
+                    <th>
+                        Created
+                    </th>
+                    <th>
+                        Updated
+                    </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var row in Model)
+            {
+                <tr>
+                    <td>
+                        @row.AdminId
+                    </td>
+                    <td>
+                        @row.FirstName
+                    </td>
+                    <td>
+                        @row.MiddleName
+                    </td>
+                    <td>
+                        @row.LastName
+                    </td>
+                    <td>
+                        @row.Username
+                    </td>
+                    <td>
+                        @row.Password
+                    </td>
+                    <td>
+                        @row.Created
+                    </td>
+                    <td>
+                        @row.Updated
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
