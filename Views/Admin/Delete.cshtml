@@ -1,0 +1,50 @@
+@model Admin
+
+<form method="post" asp-action="Delete">
+    <div class="border p-5 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">
+                Delete Admin 
+            </h2>
+            <hr>
+        </div>
+        <input asp-for="AdminId" hidden>
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" disabled>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="MiddleName"></label> 
+            <input asp-for="MiddleName" class="form-control" disabled>
+            <span asp-validation-for="MiddleName" class="text-danger"></span>
+
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" disabled>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Username"></label>
+            <input asp-for="Username" class="form-control" disabled>
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control" type="password"
+            value=@Model.Password disabled>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <hr>
+            <div asp-validation-summary="All" class="text-danger"></div>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-asp-controller="Admin" asp-action="Index" class="btn btn-success">Back To List</a>
+    </div>
+</form> 
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
