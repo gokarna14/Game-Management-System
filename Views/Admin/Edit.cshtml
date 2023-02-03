@@ -8,13 +8,14 @@
             </h2>
             <hr>
         </div>
+        <input asp-for="AdminId" hidden>
         <div class="mb-3">
             <label asp-for="FirstName"></label>
             <input asp-for="FirstName" class="form-control">
             <span asp-validation-for="FirstName" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label asp-for="MiddleName"></label>
+            <label asp-for="MiddleName"></label> 
             <input asp-for="MiddleName" class="form-control">
             <span asp-validation-for="MiddleName" class="text-danger"></span>
 
@@ -31,7 +32,8 @@
         </div>
         <div class="mb-3">
             <label asp-for="Password"></label>
-            <input asp-for="Password" class="form-control" type="password">
+            <input asp-for="Password" class="form-control" type="password"
+            value=@Model.Password>
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
         <hr>
