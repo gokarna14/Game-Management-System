@@ -1,10 +1,10 @@
 @model Admin
 
-<form method="post">
+<form method="post" asp-action="Edit">
     <div class="border p-5 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary">
-                Create Admin
+                Edit Admin 
             </h2>
             <hr>
         </div>
@@ -36,7 +36,7 @@
         </div>
         <hr>
             <div asp-validation-summary="All" class="text-danger"></div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Update</button>
         <a asp-asp-controller="Admin" asp-action="Index" class="btn btn-danger">Back To List</a>
     </div>
 </form> 

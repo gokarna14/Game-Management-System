@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using GameManagementSystem.Data;
 using GameManagementSystem.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -34,11 +35,66 @@ namespace GameManagementSystem.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Admin obj)
         {
-            _db.Admin.Add(obj);
+            if (obj.FirstName == obj.Username )
+            {
+                ModelState.AddModelError("FirstName", "The first name  and username cannot be same.");
+            }
+            if (!Regex.IsMatch(obj.FirstName + obj.MiddleName + obj.LastName, @"^[a-zA-Z]+$"))
+            {
+                ModelState.AddModelError("CustomError", "The name field cannot include numbers or special characters");
+            } 
 
-            _db.SaveChanges();
+            if (ModelState.IsValid)
+            {    
+                _db.Admin.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View( );
+        }
 
-            return RedirectToAction("Index");
+        // GET
+        public IActionResult Edit(int? id)
+        {
+                System.Console.WriteLine(id + "\n\n\n");
+            
+            if(id == null || id <= 0)
+            {
+                return NotFound();
+            }
+            var adminFromDb = _db.Admin.Find(id);
+
+            if (adminFromDb == null)        
+            {
+                return NotFound();
+            }
+
+            return View(adminFromDb);
+        }
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Admin obj)
+        {
+
+            System.Console.WriteLine(obj.LastName + "\n\n\n");
+            if (obj.FirstName == obj.Username )
+            {
+                ModelState.AddModelError("FirstName", "The first name  and username cannot be same.");
+            }
+            if (!Regex.IsMatch(obj.FirstName + obj.MiddleName + obj.LastName,@"^[a-zA-Z]+$"))
+            {
+                ModelState.AddModelError("CustomError", "The name field cannot include numbers or special characters");
+            } 
+
+            if (ModelState.IsValid)
+            {    
+                // obj.Updated = DateTime.Now;
+                _db.Admin.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View( );
         }
     }
 }
