@@ -28,6 +28,8 @@ namespace GameManagementSystem.Controllers
         // GET
         public IActionResult Create()
         {
+            
+
             return View();
         }
         // POST
@@ -44,6 +46,14 @@ namespace GameManagementSystem.Controllers
                 ModelState.AddModelError("CustomError", "The name field cannot include numbers or special characters");
             } 
 
+            var data = _db.Admin.Select(r => r.Username).ToList();
+
+            if (data.Contains(obj.Username))
+            {
+                ModelState.AddModelError("CustomError", "The username is already taken. Please use a different one.");
+            }
+            
+            
             if (ModelState.IsValid)
             {    
                 _db.Admin.Add(obj);
@@ -56,7 +66,6 @@ namespace GameManagementSystem.Controllers
         // GET
         public IActionResult Edit(int? id)
         {
-                System.Console.WriteLine(id + "\n\n\n");
             
             if(id == null || id <= 0)
             {
@@ -76,8 +85,7 @@ namespace GameManagementSystem.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Admin obj)
         {
-
-            System.Console.WriteLine(obj.LastName + "\n\n\n");
+            System.Console.WriteLine(obj.AdminId + "pppp\n\n");
             if (obj.FirstName == obj.Username )
             {
                 ModelState.AddModelError("FirstName", "The first name  and username cannot be same.");
@@ -118,27 +126,18 @@ namespace GameManagementSystem.Controllers
         // POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(Admin obj)
+        public IActionResult DeletePOST(int? AdminId)
         {
+            var obj = _db.Admin.Find(AdminId);
 
-            System.Console.WriteLine(obj.LastName + "\n\n\n");
-            if (obj.FirstName == obj.Username )
+            if (obj == null)
             {
-                ModelState.AddModelError("FirstName", "The first name  and username cannot be same.");
+                return NotFound();
             }
-            if (!Regex.IsMatch(obj.FirstName + obj.MiddleName + obj.LastName,@"^[a-zA-Z]+$"))
-            {
-                ModelState.AddModelError("CustomError", "The name field cannot include numbers or special characters");
-            } 
+            _db.Admin.Remove(obj);
+            _db.SaveChanges();
 
-            if (ModelState.IsValid)
-            {    
-                // obj.Updated = DateTime.Now;
-                _db.Admin.Update(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View( );
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ESbLSHtZvFi/0Shk5TS14NVcQo4YCVirSQMIknAYllY=",
+  "Hash": "8f3GyZXlHgo/LHBmnSU6QR3jGXcCx9NuYDSGkdPSmFQ=",
   "Source": "GameManagementSystem",
   "BasePath": "_content/GameManagementSystem",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/obj/Debug/net7.0/scopedcss/projectbundle/GameManagementSystem.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/.gitignore",
+      "SourceId": "GameManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/",
+      "BasePath": "_content/GameManagementSystem",
+      "RelativePath": "css/.gitignore",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/.gitignore"
     },
     {
       "Identity": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/bootstrap.css",

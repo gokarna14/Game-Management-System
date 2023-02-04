@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/GameManagementSystem.bundle.scp.css"
     },
     {
+      "Id": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/.gitignore",
+      "PackagePath": "staticwebassets/css/.gitignore"
+    },
+    {
       "Id": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/wwwroot/css/bootstrap.css",
       "PackagePath": "staticwebassets/css/bootstrap.css"
     },

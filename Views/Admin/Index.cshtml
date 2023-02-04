@@ -10,10 +10,11 @@
             <h2 class="text-primary">Admin List</h2>
         </div>
         <div class="col-6">
-            <a asp-controller="Admin" asp-action="Create" class="btn btn-primary">
+            <a asp-controller="Admin" asp-action="Create" class="btn btn-info">
                <i class="bi bi-plus-circle-fill"></i> &nbsp; Create New Admin Account
             </a>
         </div>
+        <hr>
     </div>
 
 
@@ -69,7 +70,11 @@
                         @row.Username
                     </td>
                     <td>
-                        @row.Password
+                        <i id=@string.Concat(row.Username, "eye") class="bi bi-eye-fill btn btn-outline-danger" onclick="getElementById('@row.Username').className=getElementById('@row.Username').className === 'visible' ? 'invisible' : 'visible'; getElementById('@string.Concat(row.Username, "eye")').className=getElementById('@row.Username').className === 'visible' ? 'bi bi-eye-slash-fill btn btn-outline-success' : 'bi bi-eye-fill btn btn-outline-danger'; "></i>
+
+                        <span id =@row.Username class="invisible">
+                            @row.Password
+                        </span>
                     </td>
                     <td>
                         @row.Created

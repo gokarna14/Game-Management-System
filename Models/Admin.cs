@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -11,7 +12,7 @@ namespace GameManagementSystem.Models
         [DisplayName("First Name")]
         public string FirstName { get; set; }
         [DisplayName("Middle Name")]
-        public string MiddleName { get; set; }
+        public string? MiddleName { get; set; }
         [Required]
         [DisplayName("Last Name")]
         public string LastName { get; set; }
