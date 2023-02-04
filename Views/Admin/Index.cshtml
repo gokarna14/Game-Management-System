@@ -4,6 +4,15 @@
     ViewData["Title"] = "Index";
 }
 
+@if (TempData["successAdmin"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Success !</strong> @TempData["successAdmin"]
+    </div>
+    <h3>Woo Hoo</h3>
+}
+
+
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">

@@ -2,6 +2,7 @@ using System.Text.RegularExpressions;
 using GameManagementSystem.Data;
 using GameManagementSystem.Models;
 using Microsoft.AspNetCore.Mvc;
+// using toaster
 
 namespace GameManagementSystem.Controllers
 {
@@ -58,6 +59,7 @@ namespace GameManagementSystem.Controllers
             {    
                 _db.Admin.Add(obj);
                 _db.SaveChanges();
+                TempData["successAdmin"] = "New Admin account created successfully";
                 return RedirectToAction("Index");
             }
             return View( );
@@ -85,7 +87,7 @@ namespace GameManagementSystem.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Admin obj)
         {
-            System.Console.WriteLine(obj.AdminId + "pppp\n\n");
+            // System.Console.WriteLine(obj.AdminId + "pppp\n\n");
             if (obj.FirstName == obj.Username )
             {
                 ModelState.AddModelError("FirstName", "The first name  and username cannot be same.");
@@ -100,6 +102,8 @@ namespace GameManagementSystem.Controllers
                 // obj.Updated = DateTime.Now;
                 _db.Admin.Update(obj);
                 _db.SaveChanges();
+                TempData["successAdmin"] = "Admin account updated successfully";
+
                 return RedirectToAction("Index");
             }
             return View( );
@@ -136,6 +140,7 @@ namespace GameManagementSystem.Controllers
             }
             _db.Admin.Remove(obj);
             _db.SaveChanges();
+            TempData["successAdmin"] = "Admin account with Id = " + AdminId + " deleted successfully";
 
             return RedirectToAction("Index");
         }

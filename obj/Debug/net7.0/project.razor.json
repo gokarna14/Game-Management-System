@@ -18690,6 +18690,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/Views/Shared/_Notifications.cshtml",
+      "TargetPath": "Views\\Shared\\_Notifications.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/Views/Admin/Delete.cshtml",
       "TargetPath": "Views\\Admin\\Delete.cshtml",
       "FileKind": "mvc"

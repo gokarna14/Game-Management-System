@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2tVIO8UsIKi3JTa314ybsro0S9dcn1BU9Zn1NeTcG9vAvimh96VW5AC1/HXpBuyaAEX4x6YAXvIR9Ypstzkojg==",
+  "dgSpecHash": "ziQi2zXz18trsI7qcKuT0pbw6gGBpUW/i8CXh9tJzeI8VCpttwsNbjS+gZ9rya6PXQWfehPY6ifozKrrPtoVpA==",
   "success": true,
   "projectFilePath": "/Users/prabasadhikari/Desktop/DotNet/GameManagementSystem/GameManagementSystem.csproj",
   "expectedPackageFiles": [
     "/Users/prabasadhikari/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/prabasadhikari/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/Users/prabasadhikari/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/prabasadhikari/.nuget/packages/jquery/1.6.3/jquery.1.6.3.nupkg.sha512",
     "/Users/prabasadhikari/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/prabasadhikari/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/prabasadhikari/.nuget/packages/microsoft.data.sqlclient/5.0.1/microsoft.data.sqlclient.5.0.1.nupkg.sha512",
@@ -69,7 +70,8 @@
     "/Users/prabasadhikari/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
     "/Users/prabasadhikari/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/prabasadhikari/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "/Users/prabasadhikari/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512"
+    "/Users/prabasadhikari/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512",
+    "/Users/prabasadhikari/.nuget/packages/toastr/2.1.1/toastr.2.1.1.nupkg.sha512"
   ],
   "logs": []
 }
